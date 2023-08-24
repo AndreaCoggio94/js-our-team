@@ -1,4 +1,4 @@
-console.log("Hello world");
+// const team with all members
 
 const team = [
   // first member
@@ -39,4 +39,15 @@ const team = [
   },
 ];
 
-console.log(team);
+// for cycle to extract every object from the array
+
+for (let teamMember of team) {
+  // for cycle to extract every object value from object
+
+  for (let Attribute in teamMember) {
+    console.log(teamMember[Attribute]);
+  }
+  //   console.log(teamMember.name);
+  //   console.log(teamMember.role);
+  //   console.log(teamMember.img);
+}
