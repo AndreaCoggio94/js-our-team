@@ -48,9 +48,16 @@ for (let teamMember of team) {
   // for cycle to extract every object value from object
 
   for (let Attribute in teamMember) {
-    cardContainer.innerHTML += `
-    <p> ${teamMember[Attribute]} </p>
-    `;
+    if (Attribute === "img") {
+      console.log("gotcha");
+      cardContainer.innerHTML += `
+      <img src="./img/${teamMember[Attribute]}" alt="${teamMember[Attribute]}">  
+        `;
+    } else {
+      cardContainer.innerHTML += `
+        <p> ${teamMember[Attribute]} </p>
+        `;
+    }
     // console.log(teamMember[Attribute]);
   }
 }
