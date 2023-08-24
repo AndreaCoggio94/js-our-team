@@ -49,17 +49,7 @@ for (let teamMember of team) {
 
   const teamCard = [];
   for (let Attribute in teamMember) {
-    // if (Attribute === "img") {
-    //   cardContainer.innerHTML += `
-    //       <img src="./img/${teamMember[Attribute]}" alt="${teamMember[Attribute]}">
-    //       `;
-    // } else {
-    //   cardContainer.innerHTML += `
-    //         <p> ${teamMember[Attribute]} </p>
-    //         `;
-    // }
     teamCard.push(teamMember[Attribute]);
-    // console.log(teamMember[Attribute]);
   }
 
   let card = cardGenerator(teamCard[0], teamCard[1], teamCard[2]);
@@ -70,16 +60,13 @@ for (let teamMember of team) {
 
 function cardGenerator(name, role, img) {
   const card = document.createElement("div");
-  card.classList.add("card");
+  card.classList.add("card", "card-3", "m-1");
   card.innerHTML += `
   <img class="card-img-top" src="./img/${img}" alt="${img}">
   <div class="card-body">
-  
-  <h5 class="card-title">${name}</h5>
-  <p class="card-text">${role}</p>
+  <h5 class="card-title text-center">${name}</h5>
+  <p class="card-text text-center">${role}</p>
 </div>
-
   `;
-
   return card;
 }

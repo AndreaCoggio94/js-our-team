@@ -33,5 +33,16 @@
 }
 
 #card-container {
-  /* display: flex; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-3 {
+  width: 30%;
+  margin: 1rem;
+}
+
+.team-description {
+  margin: 1rem 20%;
 }
