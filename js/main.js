@@ -48,29 +48,32 @@ for (let teamMember of team) {
   // for cycle to extract every object value from object
 
   for (let Attribute in teamMember) {
-    console.log(teamMember[Attribute]);
+    cardContainer.innerHTML += `
+    <p> ${teamMember[Attribute]} </p>
+    `;
+    // console.log(teamMember[Attribute]);
   }
 }
 
 // ! trying out a function to create cards
 
-generate();
+// generate();
 
-function generate() {
-  for (let i = 0; i < team.length; i++) {
-    let card = cardGenerator();
-    cardContainer.append(card);
-  }
-}
+// function generate() {
+//   for (let i = 0; i < team.length; i++) {
+//     let card = cardGenerator();
+//     cardContainer.append(card);
+//   }
+// }
 
-function cardGenerator() {
-  const card = document.createElement("div");
-  card.classList.add("card");
-  card.innerHTML += `
-  <div class="card-body">
-  <h5 class="card-title">COSE LUNGHE</h5>
-  <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In quibusdam deleniti dicta officiis quam nam. Facilis explicabo reiciendis esse. Ipsam hic dolores expedita culpa odio dolorum tempore ipsa, aliquid provident?</p>
-</div>
-  `;
-  return card;
-}
+// function cardGenerator() {
+//   const card = document.createElement("div");
+//   card.classList.add("card");
+//   card.innerHTML += `
+//   <div class="card-body">
+//   <h5 class="card-title">COSE LUNGHE</h5>
+//   <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In quibusdam deleniti dicta officiis quam nam. Facilis explicabo reiciendis esse. Ipsam hic dolores expedita culpa odio dolorum tempore ipsa, aliquid provident?</p>
+// </div>
+//   `;
+//   return card;
+// }
